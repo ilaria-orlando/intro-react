@@ -29,7 +29,7 @@ function App() {
 
     return (
       <div className="App">
-          <h1>My to do list</h1>
+          <h1>My to do's</h1>
           <div className="form">
               <form>
                   <div><input ref={todoNameRef} type="text" name="todo"/></div>
