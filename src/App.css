@@ -10,8 +10,8 @@
 
 body{
     background-image: linear-gradient(to right bottom, #fbccf3, #dfd0ff, #bfd4ff, #a0d8fe, #8cd9ee);
-    background-repeat: no-repeat;
-    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: space;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -20,7 +20,7 @@ body{
 .App {
     color: #deb881;
     text-align: center;
-    margin-top: 60px;
+    margin: 60px 0 0 60px;
     border-radius: 30px;
     width: 600px;
     height: auto;
