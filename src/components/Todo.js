@@ -2,7 +2,7 @@ import React from "react";
 
 const Todo = ({todo}) => {
     return(
-        <div>
+        <div className="listitem">
             <label>
                 <input type="checkbox" checked={todo.complete}/>
                 {todo}
