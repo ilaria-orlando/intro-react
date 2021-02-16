@@ -1,19 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 
-const Todolist = () => {
-    const todos = ["Call dentist", "Email landlord"]
+import Todo from "./Todo";
+
+const Todolist = ({todos}) => {
+
     return(
         <div className="list">
             <h3>To do's:</h3>
-                <ul>
-                    {
-                        todos.map((todo) => (
-                            <li>
-                                <input type="checkbox" /> {todo}
-                            </li>
-                        ))
-                    }
-                </ul>
+            {todos.map(todo => {
+                return (<Todo key={todo.id} todo={todo.name} />)
+            })}
         </div>
     )
 }
