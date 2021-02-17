@@ -17,7 +17,6 @@ function App() {
     const todoNameRef = useRef();
     const LOCAL_STORAGE_KEY = 'todosApp.todos'
 
-    console.log(todos)
 
     const addTodo = (event) =>{
         event.preventDefault();
@@ -49,18 +48,27 @@ function App() {
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos))
     }, [todos]);
 
+    const clearAll = () => {
+
+        window.localStorage.clear();
+        window.location.reload(false);
+
+    }
 
     return (
       <div className="App">
           <h1>My to do's</h1>
           <div className="form">
               <form>
-                  <div><input ref={todoNameRef} type="text" name="todo"/></div>
-                  <div><button onClick={addTodo} type="submit" className="button">Submit</button></div>
+                  <input ref={todoNameRef} type="text" name="todo"/>
+                  <button onClick={addTodo} type="submit" className="button">Submit</button>
               </form>
           </div>
           <SvgMiddle />
           <Todolist todos={todos} toggleTodo={toggleTodo}/>
+          <div className="cleardiv">
+              <button type="submit" className="button clear" onClick={clearAll}>Clear All</button>
+          </div>
           <SvgEnd />
       </div>
   );

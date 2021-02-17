@@ -11,7 +11,7 @@ const Todo = ({todo, toggleTodo}) => {
 
     return(
         <div className="listitem">
-            <label className={!todo.complete ? "line" : "noline"}>
+            <label className={todo.complete ? "line" : "noline"}>
                 <input type="checkbox"  checked={todo.complete} onClick={getTodoId}/>
                 {todo.name}
             </label>
