@@ -20,7 +20,7 @@ body{
 .App {
     color: #deb881;
     text-align: center;
-    margin: 60px 0 0 60px;
+    margin: 60px 0 60px 0;
     border-radius: 30px;
     width: 600px;
     height: auto;
@@ -85,8 +85,17 @@ button{
     height: 40px;
 }
 
+/*
 input[type="checkbox"] {
     opacity: 0;
+}*/
+
+.line{
+    text-decoration: line-through;
+}
+
+.noline{
+    text-decoration: none;
 }
 
 .listitem{

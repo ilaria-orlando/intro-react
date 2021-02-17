@@ -1,11 +1,19 @@
 import React from "react";
 
-const Todo = ({todo}) => {
+const Todo = ({todo, toggleTodo}) => {
+
+
+    const getTodoId = () => {
+        toggleTodo(todo.id)
+    }
+
+
+
     return(
         <div className="listitem">
-            <label>
-                <input type="checkbox" checked={todo.complete}/>
-                {todo}
+            <label className={!todo.complete ? "line" : "noline"}>
+                <input type="checkbox"  checked={todo.complete} onClick={getTodoId}/>
+                {todo.name}
             </label>
         </div>
     )
