@@ -40,11 +40,13 @@ h1{
     padding: 5px 0 0 5px;
     height: 90px;
     background-color: rgba(255, 255, 255, 0.50);
+    color: #bd9354;
     font-size: 50px;
 }
 
 h3{
     font-size: 38px;
+    color: #bd9354;
 }
 
 .form{
@@ -59,9 +61,12 @@ input[type=text]{
     background-color: rgba(255, 255, 255, 0.50);;
     border-style: none;
     text-align: center;
+    color: #deb881;
+    font-size: 20px;
     box-shadow: 9px 10px 34px -12px rgba(0,0,0,0.1);
     -webkit-box-shadow: 9px 10px 34px -12px rgba(0,0,0,0.1);
     -moz-box-shadow: 9px 10px 34px -12px rgba(0,0,0,0.1);
+
 }
 
 .list{
@@ -78,10 +83,10 @@ button{
     -moz-box-shadow: 9px 10px 34px -12px rgba(0,0,0,0.1);
     background-color: #deb881;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     border-style: none;
     border-radius: 15px;
-    width: 75px;
+    width: 85px;
     height: 40px;
 }
 
@@ -92,6 +97,8 @@ input[type="checkbox"] {
 
 .line{
     text-decoration: line-through;
+    text-decoration-style: solid;
+    text-decoration-thickness: 3px;
 }
 
 .noline{

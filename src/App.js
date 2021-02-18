@@ -3,12 +3,12 @@ import './App.css';
 import {v4 as uuidv4} from "uuid";
 
 //components
-//import Form from "./components/Form";
+
 import Todolist from "./components/Todolist";
 import SvgEnd from "./components/SvgEnd";
 import SvgMiddle from "./components/SvgMiddle";
 import EmptyMessage from "./components/EmptyMessage";
-import v5 from "uuid/dist/esm-node/v5";
+
 
 //
 
