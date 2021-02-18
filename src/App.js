@@ -7,9 +7,12 @@ import {v4 as uuidv4} from "uuid";
 import Todolist from "./components/Todolist";
 import SvgEnd from "./components/SvgEnd";
 import SvgMiddle from "./components/SvgMiddle";
+import EmptyMessage from "./components/EmptyMessage";
 import v5 from "uuid/dist/esm-node/v5";
 
 //
+
+
 
 function App() {
 
@@ -17,6 +20,7 @@ function App() {
     const todoNameRef = useRef();
     const LOCAL_STORAGE_KEY = 'todosApp.todos'
 
+    console.log(todos)
 
     const addTodo = (event) =>{
         event.preventDefault();
@@ -55,17 +59,20 @@ function App() {
 
     }
 
+
+
     return (
       <div className="App">
           <h1>My to do's</h1>
           <div className="form">
               <form>
                   <input ref={todoNameRef} type="text" name="todo"/>
-                  <button onClick={addTodo} type="submit" className="button">Submit</button>
+                  <button onClick={addTodo} type="submit" className="button">Add</button>
               </form>
           </div>
           <SvgMiddle />
           <Todolist todos={todos} toggleTodo={toggleTodo}/>
+          <EmptyMessage todos={todos} />
           <div className="cleardiv">
               <button type="submit" className="button clear" onClick={clearAll}>Clear All</button>
           </div>

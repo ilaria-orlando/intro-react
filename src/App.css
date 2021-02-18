@@ -140,11 +140,17 @@ input[type="checkbox"] {
 
 }
 
+.message{
+    font-size: 24px;
+    margin: 10px 0 15px 0
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 
 
 
