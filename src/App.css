@@ -90,6 +90,10 @@ button{
     height: 40px;
 }
 
+button:hover{
+    background-color: #f2ce9b;
+}
+
 
 input[type="checkbox"] {
     opacity: 0;
@@ -143,7 +147,7 @@ input[type="checkbox"] {
 }
 
 .clear{
-    margin: 15px 0 0 0;
+    margin: 15px 15px 15px 0;
 
 }
 

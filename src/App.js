@@ -52,10 +52,17 @@ function App() {
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos))
     }, [todos]);
 
+    const clearComplete = () => {
+
+        const stillTodo = [...todos].filter(todo => todo.complete === false)
+        setTodos(stillTodo);
+
+    }
+
     const clearAll = () => {
 
-        window.localStorage.clear();
-        window.location.reload(false);
+        const clearAll = [];
+        setTodos(clearAll)
 
     }
 
@@ -74,6 +81,7 @@ function App() {
           <Todolist todos={todos} toggleTodo={toggleTodo}/>
           <EmptyMessage todos={todos} />
           <div className="cleardiv">
+              <button type="submit" className="button clear" onClick={clearComplete}>Complete</button>
               <button type="submit" className="button clear" onClick={clearAll}>Clear All</button>
           </div>
           <SvgEnd />
